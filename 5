@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+  char str[100];
+  int count=0;
+
+  printf("Enter a string:\n");
+  fgets(str,sizeof(str),stdin);
+
+  char *ptr;
+  ptr=str;
+
+  while(*ptr!='\0'){
+    count++;
+    ptr++;
+  }
+
+  if(count>0 && str[count-1]=='\n'){
+    count--;
+  }
+  printf("count : %d",count);
+}
